@@ -1,0 +1,50 @@
+= Read Me
+
+
+https://medium.com/@robinmalhotra/secret-variables-in-xcode-and-your-ci-for-fun-and-profit-d387a50475d7
+
+
+Is there a way to hide bundle id and apple developer team from public GitHub projects?
+
+https://stackoverflow.com/questions/75215730/is-there-a-way-to-hide-bundle-id-and-apple-developer-team-from-public-github-pro
+
+`project.xcconfig` template::
++
+----
+//  project.xcconfig
+
+// Configuration settings file format documentation can be found at:
+// https://help.apple.com/xcode/#/dev745c5c974
+PRODUCT_BUNDLE_IDENTIFIER = <product_bundle_identifier>
+DEVELOPMENT_TEAM = <development_team>
+----
+
+----
+% find . -type f -name .DS_Store -delete
+----
+
+https://stackoverflow.com/questions/9794931/keep-file-in-a-git-repo-but-dont-track-changes
+
+https://git-scm.com/docs/git-update-index
+
+https://stackoverflow.com/questions/3319479/can-i-git-commit-a-file-and-ignore-its-content-changes
+
+https://git-scm.com/docs/git-update-index#_notes
+
+----
+git update-index --assume-unchanged <file_name>
+
+git update-index --no-assume-unchanged <file_name>
+
+git update-index --skip-worktree <file>
+git update-index --no-skip-worktree <file>
+
+
+NOTES
+Users often try to use the assume-unchanged and skip-worktree bits to tell Git to ignore changes to files that are tracked. This does not work as expected, since Git may still check working tree files against the index when performing certain operations. In general, Git does not provide a way to ignore changes to tracked files, so alternate solutions are recommended.
+
+For example, if the file you want to change is some sort of config file, the repository can include a sample config file that can then be copied into the ignored name and modified. The repository can even include a script to treat the sample file as a template, modifying and copying it automatically.
+----
+
+https://docs.appcircle.io/environment-variables/platform-specific-usage/using-environment-variables-in-ios-projects
+
