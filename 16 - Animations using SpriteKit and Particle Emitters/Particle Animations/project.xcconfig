@@ -1,0 +1,6 @@
+//  project.xcconfig
+
+// Configuration settings file format documentation can be found at:
+// https://help.apple.com/xcode/#/dev745c5c974
+PRODUCT_BUNDLE_IDENTIFIER = com.ronerez.Particle-Animations
+DEVELOPMENT_TEAM = <development_team>
